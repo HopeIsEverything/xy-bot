@@ -68,7 +68,6 @@ client = pytumblr.TumblrRestClient(
     oauth_token_secret
 )
 
-for i in range(0, 10):
-    text = are_you_a() + are_you_a() + are_you_a()
-    print text
-    client.create_text("testybotty", state="published", body=text)
+text = are_you_a() + are_you_a() + are_you_a()
+
+client.create_text("testybotty", state="published", body=text)
