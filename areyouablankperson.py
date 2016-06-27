@@ -46,7 +46,7 @@ def are_you_a():
         text += " "
     text += items[0]
 
-    text += " person or a"
+    text += " or a"
 
     if second_vowel:
         text += "n "
