@@ -70,4 +70,4 @@ client = pytumblr.TumblrRestClient(
 
 text = are_you_a() + are_you_a() + are_you_a()
 
-client.create_text("testybotty", state="published", body=text)
+client.create_text("xy-bot", state="published", body=text)
