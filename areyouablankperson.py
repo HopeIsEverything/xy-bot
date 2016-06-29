@@ -26,7 +26,7 @@ def get_related_words(word):
 
 def begins_with_vowel(word):
     a = word[0]
-    return a is "a" or a is "e" or a is "i" or a is "o" or a is "u"
+    return (a == "a") or (a == "e") or (a == "i") or (a == "o") or (a == "u")
 
 def are_you_a():
     items = []
@@ -36,8 +36,8 @@ def are_you_a():
         items = get_related_words(get_random_noun(level))
         level += 1
 
-    first_vowel = begins_with_vowel(items[0])
-    second_vowel = begins_with_vowel(items[1])
+    first_vowel = begins_with_vowel(items[0].strip())
+    second_vowel = begins_with_vowel(items[1].strip())
 
     text = "Are you a"
     if first_vowel:
