@@ -2,8 +2,10 @@ import random
 import pytumblr
 from wordnik import *
 
+keys = [line.rstrip("\n") for line in open("keys.txt")]
+
 apiUrl = "http://api.wordnik.com/v4"
-apiKey = "61b5d9cdfaf70bbcfd0060dda6906f55536bf6b9e2a23fd67"
+apiKey = keys[0]
 client = swagger.ApiClient(apiKey, apiUrl)
 wordApi = WordApi.WordApi(client)
 wordsApi = WordsApi.WordsApi(client)
@@ -56,10 +58,10 @@ def are_you_a():
 
     return text
 
-consumer_key = "kQg24WSBiK7laCxHizvmvayPSzQrjYi0Te8gfAaOQ0G3WAM5zq"
-consumer_secret = "pO0vvdIRaK5WdVlxzZxyviAtoujLGhtrxGxnwC7GUnSOjbkF7m"
-oauth_token = "kkrZDZ5YRuC18m22fWx63gArzzIFIJvf0SQuW9L2TaQZBIa5o7"
-oauth_token_secret = "6mQ83xXxhd75DXB46Tgkzw0AxvfsCMwyfzgN870nXM0rb4Lo8U"
+consumer_key = keys[1]
+consumer_secret = keys[2]
+oauth_token = keys[3]
+oauth_token_secret = keys[4]
 
 client = pytumblr.TumblrRestClient(
     consumer_key,
